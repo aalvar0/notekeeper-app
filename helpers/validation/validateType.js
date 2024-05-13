@@ -30,4 +30,4 @@ const myNote = {
 
 console.log(validateType(myNote));
 
-exports.validateType = validateType;
+export default validateType;
