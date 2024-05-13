@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 function App() {
-
   return (
     <>
       <h1>NOTEKEEPER-APP</h1>
