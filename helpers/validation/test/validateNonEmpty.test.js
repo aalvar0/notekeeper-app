@@ -1,4 +1,4 @@
-import { describe, expect, test } from "vitest";
+import { expect, test } from "vitest";
 import validateNonEmpty from "../validateNonEmpty.js";
 
 test("validateNonEmpty should return true for a non-empty string", () => {

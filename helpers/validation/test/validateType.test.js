@@ -1,4 +1,4 @@
-import { describe, expect, test } from "vitest";
+import { expect, test } from "vitest";
 import { validateType } from "../validateType.js";
 
 test("validateType function should return true for a valid note object", () => {
