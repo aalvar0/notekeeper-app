@@ -21,6 +21,7 @@ const createNote = (newNote) => {
 const updateNote = ({
   id,
   name,
+  number,
   description,
   important,
   status,
