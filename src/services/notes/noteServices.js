@@ -35,6 +35,7 @@ const updateNote = ({
     body: JSON.stringify({
       name: name,
       number: number,
+      description: description,
       important: important,
       status: status,
       due_date: due_date,
