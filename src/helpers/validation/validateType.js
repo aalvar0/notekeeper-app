@@ -1,23 +1,26 @@
 function validateType(note) {
   const expectedTypes = {
-    title: "string",
-    content: "string",
-    priority: "number",
-    isCompleted: "boolean",
+    name: "string",
+    description: "string",
+    important: "boolean",
+    status: "string",
+    due_date: "string",
   };
-  if (typeof note.title !== expectedTypes.title) {
+  if (typeof note.name !== expectedTypes.name) {
     return false;
   }
-  if (typeof note.content !== expectedTypes.content) {
+  if (typeof note.description !== expectedTypes.description) {
     return false;
   }
-  if (typeof note.priority !== expectedTypes.priority) {
+  if (typeof note.important !== expectedTypes.important) {
     return false;
   }
-  if (typeof note.isCompleted !== expectedTypes.isCompleted) {
+  if (typeof note.status !== expectedTypes.status) {
     return false;
   }
-
+  if (typeof note.due_date !== expectedTypes.due_date) {
+    return false;
+  }
   return true;
 }
 
