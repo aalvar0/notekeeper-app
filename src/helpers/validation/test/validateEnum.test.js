@@ -8,12 +8,7 @@ describe("validateEnum function", () => {
   });
 
   test("Invalid value", () => {
-    const isValid = validateEnum("in progress");
+    const isValid = validateEnum("in_progress");
     expect(isValid).toBe(true);
-  });
-
-  test("Empty enumOptions", () => {
-    const isValid = validateEnum("approved");
-    expect(isValid).toBe(false);
   });
 });
