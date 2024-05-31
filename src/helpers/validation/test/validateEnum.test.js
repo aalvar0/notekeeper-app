@@ -3,19 +3,17 @@ import validateEnum from "../validateEnum.js";
 
 describe("validateEnum function", () => {
   test("Valid value", () => {
-    const statusOptions = ["pending", "approved", "rejected"];
-    const isValid = validateEnum("approved", statusOptions);
-    expect(isValid).toBe(true);
-  });
-
-  test("Invalid value", () => {
-    const statusOptions = ["pending", "approved", "rejected"];
-    const isValid = validateEnum("in progress", statusOptions);
+    const isValid = validateEnum("approved");
     expect(isValid).toBe(false);
   });
 
+  test("Invalid value", () => {
+    const isValid = validateEnum("in progress");
+    expect(isValid).toBe(true);
+  });
+
   test("Empty enumOptions", () => {
-    const isValid = validateEnum("approved", []);
+    const isValid = validateEnum("approved");
     expect(isValid).toBe(false);
   });
 });
