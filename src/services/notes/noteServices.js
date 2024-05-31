@@ -1,4 +1,4 @@
-const baseUrl = `${import.meta.env.VITE_NOTES_API_URL}`;
+const baseUrl = `${import.meta.env.VITE_NOTEKEEPER}`;
 
 const getAllNotes = () => {
   return fetch(baseUrl).then((response) => response.json());
@@ -11,23 +11,16 @@ const createNote = (newNote) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      id: newNote.id ? newNote.id.toString() : Date.now().toString(),
       name: newNote.name,
-      number: newNote.number,
+      description: newNote.description,
+      important: newNote.important,
+      status: newNote.status,
+      due_date: newNote.due_date,
     }),
   }).then((response) => response.json());
 };
 
-const updateNote = ({
-  id,
-  name,
-  number,
-  description,
-  important,
-  status,
-  due_date,
-  created_at,
-}) => {
+const updateNote = (id, name, description, important, status, due_date) => {
   return fetch(`${baseUrl}/${id}`, {
     method: "PUT",
     headers: {
@@ -35,12 +28,10 @@ const updateNote = ({
     },
     body: JSON.stringify({
       name: name,
-      number: number,
       description: description,
       important: important,
       status: status,
       due_date: due_date,
-      created_at: created_at,
     }),
   }).then((response) => response.json());
 };
@@ -52,8 +43,8 @@ const deleteNote = (id) => {
 };
 
 export default {
-  getAllNotes,
-  createNote,
-  updateNote,
-  deleteNote,
+  getAllNotes: getAllNotes,
+  createNote: createNote,
+  updateNote: updateNote,
+  deleteNote: deleteNote,
 };
