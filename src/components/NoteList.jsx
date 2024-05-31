@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from "react";
-import noteServices from "../services/notes/noteServices";
 import { Note } from "./Note";
 
 export const NotesList = ({ notes, setNotes }) => {
-  const handleNoteDeleted = () => {};
   return (
     <div>
       {notes.length > 0 ? (

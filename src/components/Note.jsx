@@ -1,4 +1,3 @@
-import React from "react";
 import noteServices from "../services/notes/noteServices";
 import { useUpdate } from "../hooks/useUpdate";
 import { UpdateNoteForm } from "./UpdateNoteForm";

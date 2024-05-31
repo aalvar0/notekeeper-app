@@ -1,4 +1,3 @@
-import React from "react";
 import { useForm } from "../hooks/useForm";
 import noteServices from "../services/notes/noteServices";
 import validateEnum from "../helpers/validation/validateEnum";

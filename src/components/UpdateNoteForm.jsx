@@ -1,21 +1,11 @@
-import React from "react";
 import { useForm } from "../hooks/useForm";
 import noteServices from "../services/notes/noteServices";
 import validateEnum from "../helpers/validation/validateEnum";
 import validateNonEmpty from "../helpers/validation/validateNonEmpty";
 import validateType from "../helpers/validation/validateType";
-import { useUpdateForm } from "../hooks/useUpdateForm";
 
-export const UpdateNoteForm = ({ onNoteCreated, setVisible, id, note }) => {
-  const { update, valuesUpdate, handleChangeUpdate, resetFormUpdate } =
-    useUpdateForm({
-      name: note.name,
-      description: note.description,
-      important: note.important,
-      status: note.status,
-      due_date: note.due_date,
-    });
-  const { values, handleChange, resetForm } = useForm({
+export const UpdateNoteForm = ({ onNoteCreated, setVisible, id }) => {
+  const { values, handleChange } = useForm({
     name: "",
     description: "",
     important: false,
